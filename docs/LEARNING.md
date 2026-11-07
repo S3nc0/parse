@@ -86,4 +86,5 @@ Debugging
 
 ## Still to do
 
-- Finish stage 1: Tailwind, Git, GitHub
+- Finish stage 1: GitHub repository and first push
+- Decided on 2026-11-07 not to use Tailwind. Style Parse with plain CSS and CSS variables instead (this overrides the Tailwind lines in parse-build-process.md and the diagram).
