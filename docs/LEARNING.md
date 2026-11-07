@@ -14,11 +14,11 @@
 2. Commit and push it: `git add docs/LEARNING.md`, `git commit -m "..."`, `git push`. This also commits this "Resume here" update.
 3. Quick recap of stage 1, then start stage 2.
 
-## Stage 1 (to write)
+## Stage 1 
 
-- Built:
-- Learned:
-- Confused me:
+- Built: built the project folder for Parse.
+- Learned: html css javascript rust git 
+- Confused me: owner in rust
 
 ## Warm-up: Rust
 
@@ -103,5 +103,4 @@ Debugging
 
 ## Still to do
 
-- Finish stage 1: GitHub repository and first push
 - Decided on 2026-11-07 not to use Tailwind. Style Parse with plain CSS and CSS variables instead (this overrides the Tailwind lines in parse-build-process.md and the diagram).
