@@ -2,17 +2,34 @@
 
 ## Where I am
 
-- Stage: warm-up, before stage 1 (no Parse project code or Git repository yet)
-- Warm-up done so far: HTML, CSS, JavaScript basics. Still to come: Rust.
-- Last session: 2026-11-06
-- Practice code: `~/Documents/latex editor/warmup/index.html`
+- Stage: stage 1 done (Milestone 1). Next is stage 2: build the app shell.
+- Warm-up done: HTML, CSS, JavaScript and Rust basics
+- Last session: 2026-11-07
+- Project: `~/Documents/latex editor/parse`, on GitHub at https://github.com/S3nc0/parse (public)
+- Practice code: `~/Documents/latex editor/warmup/` (`index.html` and the Rust project `hello_parse`)
 
 ## Resume here
 
-The theme toggle works, and its check is answered. Next:
+1. Write a `## Stage 1` section below in my own words (what I built, what I learned, what confused me). The last commit's message mentions stage 1 notes, but only the Tailwind note was in it.
+2. Commit and push it: `git add docs/LEARNING.md`, `git commit -m "..."`, `git push`. This also commits this "Resume here" update.
+3. Quick recap of stage 1, then start stage 2.
 
-1. Quick recap of the key ideas (see below).
-2. Carry on with the warm-up: Rust compared with Python.
+## Stage 1 (to write)
+
+- Built:
+- Learned:
+- Confused me:
+
+## Warm-up: Rust
+
+- Cargo creates, builds and runs Rust projects (`cargo new`, `cargo run`, `cargo fmt`). It only recompiles what changed.
+- `let` variables can't change unless marked `let mut`
+- Functions need types: `fn count_words(text: &str) -> usize`. The last line without `;` is the return value.
+- Rust refuses to compile `count_words(42)`, unlike JavaScript's `2 + "2"`
+- `Result` is `Ok(value)` or `Err(error)`, handled with `match`. It's like `try`/`except`, but the compiler makes me handle the error.
+- `&` borrows a value: the function can use it, and the owner keeps it. Every value has one owner, and Rust has no garbage collector.
+- Read compiler errors from the top, and look for the `help:` line
+- Save the file before running (`cargo run` reads what's on disk)
 
 ## What I've done so far
 
