@@ -1,0 +1,9 @@
+:root {
+    --surface: #f7fbf1;
+    --on-surface: #191d17;
+}
+
+body {
+    background: var(--surface);
+    color: var(--on-surface);
+}
