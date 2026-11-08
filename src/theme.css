@@ -9,8 +9,23 @@
     --surface-container-low: #f1f5ec;
     --surface-container: #ecefe6;
     --surface-container-high: #e6e9e0;
-    
+
     --outline-variant: #c2c9bd;
+}
+
+body.dark {
+    --primary: #a1d39a;
+    --on-primary: #0a390f;
+
+    --surface: #10140f;
+    --on-surface: #e0e4db;
+    --on-surface-variant: #c2c9bd;
+
+    --surface-container-low: #191d17;
+    --surface-container: #1d211b;
+    --surface-container-high: #272b25;
+
+    --outline-variant: #424940;
 }
 
 body {
