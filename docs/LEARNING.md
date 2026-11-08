@@ -2,17 +2,29 @@
 
 ## Where I am
 
-- Stage: stage 1 done (Milestone 1). Next is stage 2: build the app shell.
+- Stage: stage 2 in progress (build the app shell), on the branch `stage2-app-shell`
 - Warm-up done: HTML, CSS, JavaScript and Rust basics
-- Last session: 2026-11-07
+- Last session: 2026-11-08
 - Project: `~/Documents/latex editor/parse`, on GitHub at https://github.com/S3nc0/parse (public)
 - Practice code: `~/Documents/latex editor/warmup/` (`index.html` and the Rust project `hello_parse`)
 
 ## Resume here
 
-1. Write a `## Stage 1` section below in my own words (what I built, what I learned, what confused me). The last commit's message mentions stage 1 notes, but only the Tailwind note was in it.
-2. Commit and push it: `git add docs/LEARNING.md`, `git commit -m "..."`, `git push`. This also commits this "Resume here" update.
-3. Quick recap of stage 1, then start stage 2.
+1. Check I'm on my branch: `git branch` should show `* stage2-app-shell`
+2. Start `npm run tauri dev` from the `parse` folder
+3. Step 6, Leafy colours part 1: create `src/theme.css` with `--surface` (`#f7fbf1`) and `--on-surface` (`#191d17`) in `:root`, a `body` rule that uses them, and `import "./theme.css";` in `src/main.tsx`
+4. Answer the check: why is the text colour called **on**-surface?
+
+## Stage 2 so far
+
+- Made the branch `stage2-app-shell` (`git switch -c`), committed "Replace the welcome screen with Parse heading" and pushed it (`git push -u origin stage2-app-shell`)
+- How the page starts: `index.html` has an empty `<div id="root">`, `main.tsx` finds it with `getElementById` and draws `<App />` inside it
+- `.ts` is JavaScript plus types (like type hints, but checked before running). `.tsx` can also hold JSX tags like `<h1>`.
+- A component is a function that returns JSX. Its name starts with a capital. To use one: import it if it's in another file, then write it as a tag (`<Sidebar />`), never `Sidebar()`.
+- React swaps each component tag for what it returns, until only HTML is left
+- Hot reload: saving a frontend file updates the window without restarting
+- Staging picks what goes in a commit. Unstaged changes stay out.
+- `git restore file` throws away unstaged changes (can lose work)
 
 ## Stage 1 
 
@@ -99,7 +111,7 @@ Debugging
 - Not very comfortable in the terminal
 - I use VS Code and Chrome
 - About 2 hours a day
-- Pace: feels right so far
+- Pace: 2026-11-08, a little too fast when many new things (like `.tsx`) arrive at once. Go one new word at a time, with more Python comparisons and simpler checks.
 
 ## Still to do
 
