@@ -11,6 +11,9 @@
     --surface-container-high: #e6e9e0;
 
     --outline-variant: #c2c9bd;
+
+    --font-sans: "IBM Plex Sans", sans-serif;
+    --font-mono: "IBM Plex Mono", monospace;
 }
 
 body.dark {
@@ -31,4 +34,5 @@ body.dark {
 body {
     background: var(--surface);
     color: var(--on-surface);
+    font-family: var(--font-sans);
 }
