@@ -1,6 +1,16 @@
 :root {
+    --primary: #3b6939;
+    --on-primary: #ffffff;
+
     --surface: #f7fbf1;
     --on-surface: #191d17;
+    --on-surface-variant: #424940;
+
+    --surface-container-low: #f1f5ec;
+    --surface-container: #ecefe6;
+    --surface-container-high: #e6e9e0;
+    
+    --outline-variant: #c2c9bd;
 }
 
 body {
