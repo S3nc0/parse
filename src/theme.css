@@ -36,3 +36,10 @@ body {
     color: var(--on-surface);
     font-family: var(--font-sans);
 }
+
+.icon {
+    font-family: "Material Symbols Sharp Variable";
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 1;
+}
