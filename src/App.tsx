@@ -12,7 +12,12 @@ function App(){
       </div>
 
       <div className="workspace">
-        work space
+        <aside className="sidebar">
+          Side bar
+        </aside>
+        <main>
+          main
+        </main>
       </div>
 
       <footer>
