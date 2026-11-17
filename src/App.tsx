@@ -1,19 +1,16 @@
 import "./App.css";
+import ToolBar from "./ToolBar";
 import TopBar from "./TopBar";
+import SideBar from "./SideBar";
+import StatusBar from "./StatusBar";
 
 function App(){
   return (
     <div className="app">
       <TopBar />
-
-      <div className="toolbar">
-        tool bar
-      </div>
-
+      <ToolBar />
       <div className="workspace">
-        <aside className="sidebar">
-          Side bar
-        </aside>
+        <SideBar />
         <main>
           <div className="panes">
             <section className="editor">
@@ -28,10 +25,7 @@ function App(){
           </div>
         </main>
       </div>
-
-      <footer>
-        Status bar
-      </footer>
+      <StatusBar />
     </div>
   );
 }
