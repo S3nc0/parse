@@ -30,8 +30,18 @@ header {
   border-right: 1px solid var(--outline-variant);
 }
 
-main{
+main {
+  display: flex;
   flex: 1;
+}
+
+.editor {
+  border-right: 1px solid var(--outline-variant);
+  flex: 47;
+}
+
+.preview {
+  flex: 53;
 }
 
 footer {
