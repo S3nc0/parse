@@ -1,8 +1,9 @@
 import { useState, useEffect } from "react";
 
 function TopBar(){
-    const [isDark, setIsDark] = useState(false);
+    const [isDark, setIsDark] = useState(localStorage.getItem("theme") !== "light");
     useEffect(() => {
+        localStorage.setItem("theme", isDark ? "dark" : "light");
         document.body.classList.toggle("dark", isDark);
     }, [isDark]);
 
