@@ -1,7 +1,10 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 function TopBar(){
     const [isDark, setIsDark] = useState(false);
+    useEffect(() => {
+        document.body.classList.toggle("dark", isDark);
+    }, [isDark]);
 
     return (
     <header>
