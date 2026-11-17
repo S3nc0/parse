@@ -16,11 +16,16 @@ function App(){
           Side bar
         </aside>
         <main>
-          <div className="editor">
-            editor
+          <div className="panes">
+            <section className="editor">
+              editor
+            </section>
+            <section className="preview">
+              preview
+            </section>
           </div>
-          <div className="preview">
-            preview
+          <div className="terminal">
+            terminal
           </div>
         </main>
       </div>

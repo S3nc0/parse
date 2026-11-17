@@ -32,6 +32,12 @@ header {
 
 main {
   display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.panes {
+  display: flex;
   flex: 1;
 }
 
@@ -42,6 +48,11 @@ main {
 
 .preview {
   flex: 53;
+}
+
+.terminal {
+  height: 260px;
+  border-top: 1px solid var(--outline-variant);
 }
 
 footer {
