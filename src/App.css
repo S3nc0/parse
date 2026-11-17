@@ -48,6 +48,7 @@ main {
 
 .preview {
   flex: 53;
+  background-color: var(--surface-container-high);
 }
 
 .terminal {
