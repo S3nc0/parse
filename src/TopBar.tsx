@@ -1,7 +1,10 @@
 function TopBar(){
     return (
     <header>
-        Top bar
+        <span>Parse</span>
+        <button className="theme-toggle">
+            <span className="icon">dark_mode</span>
+        </button>
     </header>
     );
 }

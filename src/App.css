@@ -9,6 +9,8 @@ body {
 }
 
 header {
+  display: flex;
+  justify-content: space-between;
   background-color: var(--surface-container);
   border-bottom: 1px solid var(--outline-variant);
 }
