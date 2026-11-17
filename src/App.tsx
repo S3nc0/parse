@@ -1,11 +1,10 @@
 import "./App.css";
+import TopBar from "./TopBar";
 
 function App(){
   return (
     <div className="app">
-      <header>
-        Top bar
-      </header>
+      <TopBar />
 
       <div className="toolbar">
         tool bar
