@@ -4,19 +4,18 @@
 
 - Stage: stage 2 in progress (build the app shell), on the branch `stage2-app-shell`
 - Warm-up done: HTML, CSS, JavaScript and Rust basics
-- Last session: 2026-11-15
+- Last session: 2026-11-18
 - Project: `~/Documents/latex editor/parse`, on GitHub at https://github.com/S3nc0/parse (public)
 - Practice code: `~/Documents/latex editor/warmup/` (`index.html` and the Rust project `hello_parse`)
 
 ## Resume here
 
 1. Check I'm on my branch: `git branch` should show `* stage2-app-shell`
-2. Start `npm run tauri dev` from the `parse` folder
-3. Step 21, layout part 5: inside `<main>` in `App.tsx`, add `<div className="panes">` holding `<section className="editor">Editor</section>` and `<section className="preview">Preview</section>`, then `<div className="terminal">Terminal</div>` after `.panes`
-4. In `App.css`: `main` gets `display: flex` and `flex-direction: column` (keep `flex: 1`). `.panes`: flex and `flex: 1`. `.editor`: `flex: 47`. `.preview`: `flex: 53`, `border-left`, `background-color: var(--surface-container-high)`. `.terminal`: `height: 260px` and `border-top`.
-5. Answer the check: with `flex: 47` and `flex: 53`, the editor gets ____% of the width
+2. If the saved-theme change in `TopBar.tsx` isn't committed yet, commit and push it (type the message to the tutor first)
+3. Start `npm run tauri dev` from the `parse` folder
+4. Next: resizable panes (drag the lines between sidebar, editor, preview and terminal)
 
-Stage 2 checklist: Leafy tokens ✅, fonts ✅, icons ✅, layout (rows, sidebar and main done; editor, preview and terminal next), resizable panes, saved theme
+Stage 2 checklist: Leafy tokens ✅, fonts ✅, icons ✅, layout ✅ (skeleton, bars still need their real contents), resizable panes, saved theme ✅
 
 ## Stage 2 so far
 
@@ -43,7 +42,18 @@ Stage 2 checklist: Leafy tokens ✅, fonts ✅, icons ✅, layout (rows, sidebar
 - An imported CSS file applies to the whole page, whichever file imports it. I import `App.css` in `App.tsx` so it's easy to find.
 - `main` (no dot) selects the `<main>` tag. `.main` selects `className="main"`.
 - `flex-direction: row` is the default, so `display: flex` alone puts children side by side
-- Layout so far: `.app` (column, `100vh`) holds `header`, `.toolbar`, `.workspace` (flex row, `flex: 1`) and `footer`. `.workspace` holds `.sidebar` (250px) and `main` (`flex: 1`). Each area has a Leafy background and one divider line.
+- Layout: `.app` (column, `100vh`) holds `<TopBar />`, `<ToolBar />`, `.workspace` (row) and `<StatusBar />`. `.workspace` holds `<SideBar />` (250px) and `main` (column). `main` holds `.panes` (row, `flex: 1`: editor 47, preview 53) and `.terminal` (260px).
+- Nesting flex: an element can grow inside its parent (`flex: 1`) and lay out its own children (`display: flex`) at the same time. Like a list inside a list.
+- Component files: one component per file, `export default` it, then `import TopBar from "./TopBar";` (no `.tsx`) and write `<TopBar />`. Import names must match the file name's capitals exactly (Linux cares, my Mac doesn't).
+- `return (` must be on one line. A `return` alone on a line returns nothing, like in Python.
+- A component's tags must be inside one parent, and a self-closing tag needs the `/`: `<TopBar />`
+- `justify-content: space-between` pushes the first child left and the last right, with even space between
+- Buttons have browser default styles that ignore my variables. Style them myself (`background: transparent`, `border: none`, `color: var(...)`, `cursor: pointer`). Icons are text, so `color` sets their colour, and they inherit it from the button.
+- State: `const [isDark, setIsDark] = useState(start)`. React remembers it between redraws. Change it only with the setter (`setIsDark(!isDark)`), never with `=`. The setter also makes React redraw.
+- `{ }` in JSX runs JavaScript. `onClick={() => ...}` handles clicks. The ternary `a ? b : c` is like Python's `b if a else c`. `!x` is like `not x`. `!==` is like Python's `!=`.
+- Effects: `useEffect(() => { ... }, [isDark])` runs after React draws, only when `isDark` changes. Use it for side jobs outside React, like the `body` class and saving.
+- `localStorage.setItem("theme", "dark")` and `getItem("theme")` work like a saved dictionary of text. `useState(localStorage.getItem("theme") !== "light")` opens dark the first time, and remembers my choice after that.
+- A pushed commit message stays (fixing it needs a force push, which can lose work). Read the message before pressing Enter. My commit `ed1e0b5 Minimize import code` is really where the theme switch started working.
 
 ## Stage 1 
 
