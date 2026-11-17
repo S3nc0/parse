@@ -15,6 +15,13 @@ header {
   border-bottom: 1px solid var(--outline-variant);
 }
 
+.theme-toggle {
+  background-color: transparent;
+  border: none;
+  color: var(--on-surface-variant);
+  cursor: pointer;
+}
+
 .toolbar {
   background-color: var(--surface-container);
   border-bottom: 1px solid var(--outline-variant);
