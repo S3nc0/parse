@@ -51,12 +51,12 @@ main {
 }
 
 .editor {
+    height: 100%;
   border-right: 1px solid var(--outline-variant);
-  flex: 47;
 }
 
 .preview {
-  flex: 53;
+  height: 100%;
   background-color: var(--surface-container-high);
 }
 
