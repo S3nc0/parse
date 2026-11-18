@@ -2,10 +2,11 @@ import "./App.css";
 import ToolBar from "./ToolBar";
 import TopBar from "./TopBar";
 import SideBar from "./SideBar";
+import Panes from "./Panes";
 import StatusBar from "./StatusBar";
 import { Group, Panel, Separator } from "react-resizable-panels";
 
-function App(){
+function App() {
   return (
     <div className="app">
       <TopBar />
@@ -17,15 +18,7 @@ function App(){
         <Separator className="separator" />
         <Panel>
           <main>
-            <Group className="panes">
-              <Panel defaultSize="47%">
-                <section className="editor">editor</section>
-              </Panel>
-              <Separator className="separator" />
-              <Panel defaultSize="53%">
-                <section className="preview">preview</section>
-              </Panel>
-            </Group>
+            <Panes />
             <div className="terminal">
               terminal
             </div>
