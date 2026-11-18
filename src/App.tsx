@@ -10,23 +10,28 @@ function App(){
     <div className="app">
       <TopBar />
       <ToolBar />
-      <div className="workspace">
-        <SideBar />
-        <main>
-          <Group className="panes">
-            <Panel defaultSize="47%">
-              <section className="editor">editor</section>
-            </Panel>
-            <Separator className="separator" />
-            <Panel defaultSize="53%">
-              <section className="preview">preview</section>
-            </Panel>
-          </Group>
-          <div className="terminal">
-            terminal
-          </div>
-        </main>
-      </div>
+      <Group className="workspace">
+        <Panel defaultSize="200px" minSize="180px">
+          <SideBar />
+        </Panel>
+        <Separator className="separator" />
+        <Panel>
+          <main>
+            <Group className="panes">
+              <Panel defaultSize="47%">
+                <section className="editor">editor</section>
+              </Panel>
+              <Separator className="separator" />
+              <Panel defaultSize="53%">
+                <section className="preview">preview</section>
+              </Panel>
+            </Group>
+            <div className="terminal">
+              terminal
+            </div>
+          </main>
+        </Panel>
+      </Group>
       <StatusBar />
     </div>
   );

@@ -44,15 +44,14 @@ header {
 }
 
 .sidebar {
-  width: 250px;
+  height: 100%;
   background-color: var(--surface-container-low);
-  border-right: 1px solid var(--outline-variant);
 }
 
 main {
   display: flex;
   flex-direction: column;
-  flex: 1;
+  height: 100%;
 }
 
 .panes {
