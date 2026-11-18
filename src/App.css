@@ -33,6 +33,16 @@ header {
 
 }
 
+.separator {
+  width: 1px;
+  background-color: var(--outline-variant);
+}
+
+.separator[data-separator="hover"],.separator[data-separator="active"] {
+  width: 1.5px;
+  background-color: var(--primary);
+}
+
 .sidebar {
   width: 250px;
   background-color: var(--surface-container-low);
@@ -52,7 +62,6 @@ main {
 
 .editor {
     height: 100%;
-  border-right: 1px solid var(--outline-variant);
 }
 
 .preview {

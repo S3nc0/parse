@@ -17,7 +17,7 @@ function App(){
             <Panel defaultSize="47%">
               <section className="editor">editor</section>
             </Panel>
-            <Separator />
+            <Separator className="separator" />
             <Panel defaultSize="53%">
               <section className="preview">preview</section>
             </Panel>
