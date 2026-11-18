@@ -18,10 +18,17 @@ function App() {
         <Separator className="separator" />
         <Panel>
           <main>
-            <Panes />
-            <div className="terminal">
-              terminal
-            </div>
+            <Group orientation="vertical">
+              <Panel>
+                <Panes />
+              </Panel>
+              <Separator className="separator-horizontal" />
+              <Panel defaultSize="260px" minSize="100px">
+                <div className="terminal">
+                  terminal
+                </div>
+              </Panel>
+            </Group>
           </main>
         </Panel>
       </Group>

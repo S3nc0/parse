@@ -37,9 +37,18 @@ header {
   width: 1px;
   background-color: var(--outline-variant);
 }
+.separator-horizontal {
+  height: 1px;
+  background-color: var(--outline-variant);
+}
 
-.separator[data-separator="hover"],.separator[data-separator="active"] {
+.separator[data-separator="hover"], .separator[data-separator="active"] {
   width: 1.5px;
+  background-color: var(--primary);
+}
+
+.separator-horizontal[data-separator="hover"], .separator-horizontal[data-separator="active"] {
+  height: 1.5px;
   background-color: var(--primary);
 }
 
@@ -49,14 +58,7 @@ header {
 }
 
 main {
-  display: flex;
-  flex-direction: column;
   height: 100%;
-}
-
-.panes {
-  display: flex;
-  flex: 1;
 }
 
 .editor {
@@ -69,8 +71,7 @@ main {
 }
 
 .terminal {
-  height: 260px;
-  border-top: 1px solid var(--outline-variant);
+  height: 100%;
 }
 
 footer {
